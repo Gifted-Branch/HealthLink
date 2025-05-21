@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-05-05 13:25:25.925080",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scheme_name",
+  "scheme_plan"
+ ],
+ "fields": [
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Link",
+   "label": "Scheme Name",
+   "options": "Insurance Scheme"
+  },
+  {
+   "fieldname": "scheme_plan",
+   "fieldtype": "Data",
+   "label": "Scheme Plan"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-21 12:10:18.244165",
+ "modified_by": "Administrator",
+ "module": "HealthLink",
+ "name": "Scheme Plans",
+ "naming_rule": "Autoincrement",
+ "owner": "lubutsejbrown@gmail.com",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-06 12:00:12.598750",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "appointment",
+  "patient_id",
+  "patient_name",
+  "visit",
+  "department",
+  "column_break_mcoc",
+  "assigned_to",
+  "queue_time",
+  "previous_department",
+  "status",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "label": "Appointment",
+   "options": "Patient Appointment"
+  },
+  {
+   "fetch_from": "appointment.patient",
+   "fieldname": "patient_id",
+   "fieldtype": "Data",
+   "label": "Patient ID"
+  },
+  {
+   "fetch_from": "appointment.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "visit",
+   "fieldtype": "Link",
+   "label": "Visit",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Select",
+   "label": "Department",
+   "options": "Nursing\nConsultation\nLaboratory\nPharmacy\nBilling\nRadiology\nFront Desk"
+  },
+  {
+   "fieldname": "column_break_mcoc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "queue_time",
+   "fieldtype": "Datetime",
+   "label": "Queue Time"
+  },
+  {
+   "fieldname": "previous_department",
+   "fieldtype": "Data",
+   "label": "Previous Department"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Waiting\nIn Progress\nCompleted\nSkipped"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-21 12:11:43.350945",
+ "modified_by": "Administrator",
+ "module": "HealthLink",
+ "name": "Patient Queue",
+ "owner": "lubutsejbrown@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

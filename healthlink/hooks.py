@@ -141,13 +141,14 @@ doctype_js = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Inpatient Occupancy": {
+		"before_submit": "healthlink.healthlink.customizations.inpatient_occupancy.before_submit"
+	},
+    "Scheme Period": {
+        "validate": "healthlink.healthlink.customizations.scheme_period.validate"
+    },
+}
 
 # Scheduled Tasks
 # ---------------

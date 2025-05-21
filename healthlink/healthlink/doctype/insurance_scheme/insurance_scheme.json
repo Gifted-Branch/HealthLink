@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "autoname": "field:scheme_name",
+ "creation": "2025-05-05 11:34:35.134664",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "insurance_company",
+  "insurance_name",
+  "scheme_name",
+  "column_break_hgcl",
+  "copay_type",
+  "copay_value",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "default": "customer",
+   "fieldname": "insurance_company",
+   "fieldtype": "Link",
+   "label": "Insurance Company",
+   "link_filters": "[[\"Customer\",\"customer_group\",\"=\",\"Medical Insurance\"]]",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "insurance_company.customer_name",
+   "fetch_if_empty": 1,
+   "fieldname": "insurance_name",
+   "fieldtype": "Data",
+   "label": "Insurance Name"
+  },
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Data",
+   "label": "Scheme Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_hgcl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "copay_type",
+   "fieldtype": "Select",
+   "label": "Copay Type",
+   "options": "None\nFixed Amount\nPercentage"
+  },
+  {
+   "fieldname": "copay_value",
+   "fieldtype": "Float",
+   "label": "Copay Value"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "is_active"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-21 12:10:57.131769",
+ "modified_by": "Administrator",
+ "module": "HealthLink",
+ "name": "Insurance Scheme",
+ "naming_rule": "By fieldname",
+ "owner": "lubutsejbrown@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Healthcare",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

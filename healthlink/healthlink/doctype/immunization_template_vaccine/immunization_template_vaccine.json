@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-01 11:48:02.208383",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_tasi",
+  "program",
+  "vaccine_item",
+  "item_code",
+  "item_name",
+  "column_break_khnk",
+  "age_value",
+  "dose",
+  "age_unit",
+  "mandatory",
+  "price"
+ ],
+ "fields": [
+  {
+   "fieldname": "program",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Program",
+   "options": "KEPI\nWHO\nAAP\nTravel\nAdult\nCatch-Up\nCustom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vaccine_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vaccine Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "default": "Checked",
+   "fieldname": "section_break_tasi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "vaccine_item.item_code",
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "label": "Item Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_khnk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vaccine_item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "age_value",
+   "fieldtype": "Int",
+   "label": "Age Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dose",
+   "fieldtype": "Select",
+   "label": "Dose",
+   "options": "Dose 1\nDose 2\nDose 3\nDose 4\nBooster 1\nBooster 2\nAnnual\nSingle Dose",
+   "reqd": 1
+  },
+  {
+   "fieldname": "age_unit",
+   "fieldtype": "Select",
+   "label": "Age Unit",
+   "options": "Days\nWeeks\nMonths\nYears",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "mandatory",
+   "fieldtype": "Check",
+   "label": "Mandatory"
+  },
+  {
+   "fetch_from": "vaccine_item.standard_rate",
+   "fieldname": "price",
+   "fieldtype": "Data",
+   "label": "Price per Dose",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-01 13:35:46.239237",
+ "modified_by": "Administrator",
+ "module": "HealthLink",
+ "name": "Immunization Template Vaccine",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

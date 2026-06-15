@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "autoname": "PVR-.YYYY.-.####",
+ "creation": "2026-06-01 14:00:02.496739",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_details_section",
+  "patient",
+  "full_name",
+  "column_break_kwch",
+  "dob",
+  "active",
+  "invoiced",
+  "section_break_hgwj",
+  "immunization_summary",
+  "section_break_ujfs",
+  "patient_immunization",
+  "load_vaccinces",
+  "immunization_summary_tab",
+  "section_break_mmcl",
+  "patient_immunization_vaccines"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "column_break_kwch",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient Name",
+   "options": "Patient",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_ujfs",
+   "fieldtype": "Section Break",
+   "label": "Immunization Template"
+  },
+  {
+   "fieldname": "patient_immunization",
+   "fieldtype": "Table",
+   "options": "Patient Immunization Template"
+  },
+  {
+   "fieldname": "load_vaccinces",
+   "fieldtype": "Button",
+   "label": "Load Vaccinces"
+  },
+  {
+   "fieldname": "section_break_mmcl",
+   "fieldtype": "Section Break",
+   "label": "Patient Immunization Schedule"
+  },
+  {
+   "fieldname": "patient_immunization_vaccines",
+   "fieldtype": "Table",
+   "label": "Patient Immunization Vaccines",
+   "options": "Patient Immunization Vaccines"
+  },
+  {
+   "fieldname": "immunization_summary_tab",
+   "fieldtype": "Tab Break",
+   "label": "Patient Vaccine List"
+  },
+  {
+   "fieldname": "immunization_summary",
+   "fieldtype": "HTML",
+   "label": "Immunization Summary"
+  },
+  {
+   "fieldname": "section_break_hgwj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "invoiced",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "is_virtual": 1,
+   "label": "invoiced",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-06-09 14:29:29.478088",
+ "modified_by": "Administrator",
+ "module": "HealthLink",
+ "name": "Patient Immunization Record",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Physician",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
